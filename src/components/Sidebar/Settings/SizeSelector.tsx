@@ -23,7 +23,7 @@ export const SizeSelector = () => {
   return (
     <div className="flex flex-col gap-4">
       <div className="flex items-center gap-2">
-        <h3 className="font-medium text-foreground text-lg">Array Size</h3>
+        <h3 className="text-lg font-medium text-foreground">Array Size</h3>
         <TooltipInfo
           title="Array Size"
           content="The size of the array to be sorted. Smaller sizes are faster to visualize. Numbers mode is limited to 20 items (Medium)."
@@ -35,7 +35,7 @@ export const SizeSelector = () => {
             key={size}
             variant="ghost"
             className={cn(
-              "px-4 py-2 capitalize text-white hover:bg-accent hover:text-white h-auto border-2 border-accent",
+              "px-4 py-2 rounded capitalize text-white hover:bg-accent hover:text-white h-auto border-2 border-accent",
               {
                 "bg-accent hover:bg-accent/90 hover:text-white":
                   Number(size) === activeSize,

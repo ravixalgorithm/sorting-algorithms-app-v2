@@ -9,7 +9,7 @@ import { useEffect } from "react";
 import { Sidebar } from "./components/Sidebar";
 import { Separator } from "./components/ui/separator";
 import { MobileHeader } from "./components/MobileHeader";
-
+import { DarkModeProvider } from './context/DarkModeContext.js'
 function App() {
   const { setIsMobile, setSize } = useStore();
 
@@ -25,9 +25,9 @@ function App() {
   return (
     <div className="flex h-dvh bg-background text-foreground">
       <Sidebar />
-      <main className="lg:container lg:max-w-7xl flex flex-col gap-4 lg:gap-10 p-8 lg:p-10 h-full w-full">
+      <main className="flex flex-col w-full h-full gap-4 p-8 lg:container lg:max-w-7xl lg:gap-10 lg:p-10">
         <MobileHeader />
-        <div className="hidden md:flex flex-col gap-10">
+        <div className="flex-col hidden gap-10 md:flex">
           <Header />
           <Separator />
         </div>
